@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林聖鈞 - 我的社交網頁</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff8dbf;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .link-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link-item img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .link-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .link-item {
+                padding: 15px;
+            }
+
+            .link-item img {
+                width: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>林聖鈞</h1>
+        <p>美妝與時尚愛好者</p>
+    </header>
+
+    <section class="links">
+        <div class="link-item" id="github">
+            <a href="https://github.com/yourusername" target="_blank">
+                <img src="github-icon.png" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+        </div>
+        <div class="link-item" id="email">
+            <a href="mailto:your.email@example.com">
+                <img src="email-icon.png" alt="Email">
+                <span>Email</span>
+            </a>
+        </div>
+        <div class="link-item" id="linkedin">
+            <a href="https://www.linkedin.com/in/yourname/" target="_blank">
+                <img src="linkedin-icon.png" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+        </div>
+        <div class="link-item" id="instagram">
+            <a href="https://www.instagram.com/yourusername/" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 林聖鈞 - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // 簡單的動態效果：hover時變色
+        const linkItems = document.querySelectorAll('.link-item');
+
+        linkItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.backgroundColor = '#f1c6e1';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
